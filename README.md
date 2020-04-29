@@ -32,9 +32,7 @@ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg19/multiz46way/alignments/known
 cd /path/to/multialign/hg19
 grep RAI1 knownGeneXRef.txt | grep ENST00000353383
 grep uc002grm.3 knownCanonical.exonNuc.fa.fai | grep _hg19
-```
-In the following example, multi-way alignments gene RAI1 are captured
-```
+
 cd /path/to/multialign/hg19/by_species
 /path/to/samtools faidx knownCanonical.exonNuc.fa uc002grm.3_hg19_1_4 > rai1.huma
 /path/to/samtools faidx knownCanonical.exonNuc.fa uc002grm.3_rheMac2_1_4 > rai1.rhesys
@@ -74,13 +72,13 @@ cd /path/to/multialign/server
 npm install
 ```
 
-4. Install your certificate so that the server can run using https
+3. Install your certificate so that the server can run using https
 ```
 cd /path/to/multialign/server/certs
 # this is where the certificate should be located
 ```
 
-5. Run the multialign server
+4. Run the multialign server
 ```
 npm install forever
 cd /path/to/multialign/server
