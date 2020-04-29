@@ -20,7 +20,7 @@ wget knownGene.exonNuc.fa.gz
 ```
 grep RAI1 knownGeneXRef.txt | grep ENST00000353383
 grep uc002grm.3 knownCanonical.exonNuc.fa.fai | grep _hg19
-``
+```
 
 In the following example, multi-way alignments gene RAI1 are captured
 ```
@@ -49,4 +49,14 @@ oldenPath/hg19/bigZips/hg19.chrom.sizes chr17.phyloP46way.primate.bw
 ./bigwig view -r chr17:17584787-17714767 chr17.phyloP46way.primate.bw
 ```
 
+7. Get the packages for the server
+```
+cd server
+npm install
+```
+
+8. Run the multialign server
+```
+node server/server.js
+```
 
